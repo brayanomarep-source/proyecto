@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ben 10 Universe</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+overflow:hidden;
+}
+
+/* Fondo tipo Omnitrix */
+
+.fondo{
+position:fixed;
+width:100%;
+height:100%;
+background:
+repeating-radial-gradient(
+circle,
+rgba(0,255,100,.15) 0px,
+rgba(0,255,100,.15) 2px,
+transparent 3px,
+transparent 40px
+);
+animation:girarFondo 25s linear infinite;
+z-index:-1;
+}
+
+@keyframes girarFondo{
+from{
+transform:rotate(0deg) scale(1.5);
+}
+to{
+transform:rotate(360deg) scale(1.5);
+}
+}
+
+/* Banner */
+
+.banner{
+height:80px;
+background:#111;
+border-bottom:3px solid #00ff66;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 0 20px #00ff66;
+}
+
+.banner h1{
+color:#00ff66;
+text-shadow:0 0 15px #00ff66;
+}
+
+/* Layout */
+
+.container{
+display:flex;
+height:calc(100vh - 80px);
+}
+
+/* Menú lateral */
+
+.sidebar{
+width:250px;
+background:#0b0b0b;
+border-right:2px solid #00ff66;
+padding:20px;
+}
+
+.sidebar h2{
+color:#00ff66;
+margin-bottom:15px;
+}
+
+.sidebar button{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+background:#111;
+border:1px solid #00ff66;
+color:white;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.sidebar button:hover{
+background:#00ff66;
+color:black;
+}
+
+/* Contenido */
+
+.main{
+flex:1;
+padding:40px;
+overflow-y:auto;
+}
+
+.card{
+background:rgba(15,15,15,.95);
+border:2px solid #00ff66;
+border-radius:20px;
+padding:30px;
+box-shadow:0 0 25px #00ff66;
+}
+
+/* Omnitrix */
+
+.omnitrix{
+width:180px;
+height:180px;
+border:12px solid #00ff66;
+border-radius:50%;
+margin:auto;
+margin-bottom:30px;
+animation:girar 4s linear infinite;
+}
+
+@keyframes girar{
+from{
+transform:rotate(0deg);
+}
+to{
+transform:rotate(360deg);
+}
+}
+
+h2{
+color:#00ff66;
+margin-bottom:15px;
+}
+
+p{
+line-height:1.8;
+}
+
+#Layer1 {
+	position:absolute;
+	width:290px;
+	height:260px;
+	z-index:1;
+	left: 345px;
+	top: 400px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="fondo"></div>
+
+<header class="banner">
+<h1> BEN 10 UNIVERSE</h1>
+</header>
+
+<div class="container">
+
+<aside class="sidebar">
+
+<h2>Aliens</h2>
+<button onclick="mostrar('Heatblast')">
+<a href="pag2.html"> Heatblast</a></button>
+
+<button onclick="mostrar('xlr8')">
+<a href="pag3.html">XLR8</a></button>
+<button onclick="mostrar('diamond')"><a href="pag4.html">Diamondhead</a></button>
+
+<button onclick="mostrar('grey')"><a href="pag5.html"> Grey Matter</a>
+</button>
+
+<button onclick="mostrar('vilgax')"> <a href="pag6.html">Vilgax</a>
+</button>
+
+<button onclick="mostrar('omnitrix')"><a href="index.html">
+ inicio</a>
+</button>
+
+</aside>
+
+<main class="main">
+
+<div class="card" id="contenido">
+
+  <p><center>
+    <img src="imagenes/inicio.gif" width="404" height="205">
+  </center></p>
+  <h2>OMNITRIX</h2>
+  <p>
+El Omnimatrix, (comúnmente conocido como el Omnitrix o Nuevo Omnitrix) es una de las mas importantes creaciones de Azmuth y el sucesor del Ultimatrix y del Omnitrix original.
+</p>
+<p>El Omnitrix se parece a un reloj de pulsera. La placa bugi bugi frontal está cuadrada en vez de redonda y tiene una combinacion de colores blanco y verde, la placa frontal es de color negro con dos franjas verdes haciendo la forma del símbolo de paz intergalactica (pero no los colores). Cuando la placa frontal se desliza hacia atras, el nucleo del Omnitrix es revelado</p>
+<p>Fue mencionado por Azmuth en "El mapa del Infinito". Según el, estaba planeando dárselo a Ben, pero no estaba completo y la segunda razón fue porque la madurez de Ben necesitaba incrementarse antes de usarlo.</p>
+<p>Al igual que el Omnitrix original y el Ultimatrix, el Omnitrix principalmente permite al usuario alterar su ADN a voluntad y transformarse en una gran variedad de especies alienigenas que tienen sus propios poderes y habilidades unicas (junto con sus debilidades) y Una seleccion de ADN alienigena que se encuentra en grupos de 10.</p>
+<p>El Omnitrix tiene una interfaz holografica, donde se muestra un círculo holografico, con la mitad superior con caras alienigenas, que se activa y se desplaza a través de los extraterrestres por el usuario tocando la placa frontal, o de otras maneras, desplazandose hacia arriba y hacia abajo o desplazandose hacia adentro un circulo, similar a una pantalla tactil. La placa frontal se abrira automaticamente despues de que Ben elija a su alienigena, despues de eso, saldra el nucleo del Omnitrix. Cuando se presiona, activara la transformacion.</p>
+<p>El Omnitrix tiene un escaner de ADN. 1
+El Omnitrix tiene una funcion de cambio rapido que transforma automaticamente al usuario de nuevo a la normalidad cuando termina de usar su transformacion, lo que hace que no se agote el tiempo y permite que el usuario vuelva a transformarse mucho mas rapido.</p>
+<map name="omnitrix">
+<area shape="circle" coords="700,900,09,09" href="pag7.html">
+<p><img src="imagenes/todos.jpg" width="708" height="288"></p>
+
+
+</map>
+
+
+
+</body>
+</html>

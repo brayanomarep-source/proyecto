@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ben 10 Universe</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+overflow:hidden;
+}
+
+/* Fondo tipo Omnitrix */
+
+.fondo{
+position:fixed;
+width:100%;
+height:100%;
+background:
+repeating-radial-gradient(
+circle,
+rgba(0,255,100,.15) 0px,
+rgba(0,255,100,.15) 2px,
+transparent 3px,
+transparent 40px
+);
+animation:girarFondo 25s linear infinite;
+z-index:-1;
+}
+
+@keyframes girarFondo{
+from{
+transform:rotate(0deg) scale(1.5);
+}
+to{
+transform:rotate(360deg) scale(1.5);
+}
+}
+
+/* Banner */
+
+.banner{
+height:80px;
+background:#111;
+border-bottom:3px solid #00ff66;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 0 20px #00ff66;
+}
+
+.banner h1{
+color:#00ff66;
+text-shadow:0 0 15px #00ff66;
+}
+
+/* Layout */
+
+.container{
+display:flex;
+height:calc(100vh - 80px);
+}
+
+/* Menú lateral */
+
+.sidebar{
+width:250px;
+background:#0b0b0b;
+border-right:2px solid #00ff66;
+padding:20px;
+}
+
+.sidebar h2{
+color:#00ff66;
+margin-bottom:15px;
+}
+
+.sidebar button{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+background:#111;
+border:1px solid #00ff66;
+color:white;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.sidebar button:hover{
+background:#00ff66;
+color:black;
+}
+
+/* Contenido */
+
+.main{
+flex:1;
+padding:40px;
+overflow-y:auto;
+}
+
+.card{
+background:rgba(15,15,15,.95);
+border:2px solid #00ff66;
+border-radius:20px;
+padding:30px;
+box-shadow:0 0 25px #00ff66;
+}
+
+/* Omnitrix */
+
+.omnitrix{
+width:180px;
+height:180px;
+border:12px solid #00ff66;
+border-radius:50%;
+margin:auto;
+margin-bottom:30px;
+animation:girar 4s linear infinite;
+}
+
+@keyframes girar{
+from{
+transform:rotate(0deg);
+}
+to{
+transform:rotate(360deg);
+}
+}
+
+h2{
+color:#00ff66;
+margin-bottom:15px;
+}
+
+p{
+line-height:1.8;
+}
+
+#Layer1 {
+	position:absolute;
+	width:290px;
+	height:260px;
+	z-index:1;
+	left: 345px;
+	top: 400px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="fondo"></div>
+
+<header class="banner">
+<h1> BEN 10 UNIVERSE</h1>
+</header>
+
+<div class="container">
+
+<aside class="sidebar">
+
+<h2>Aliens</h2>
+<p>&nbsp;</p>
+<button onclick="mostrar('Heatblast')">
+<a href="pag2.html"> Heatblast</a></button>
+
+<button onclick="mostrar('xlr8')">
+<a href="index.html">inicio</a></button>
+<button onclick="mostrar('diamond')"><a href="pag4.html">Diamondhead</a></button>
+
+<button onclick="mostrar('grey')"><a href="pag5.html"> Grey Matter</a>
+</button>
+
+<button onclick="mostrar('vilgax')"> <a href="pag6.html">Vilgax</a>
+</button>
+
+<button onclick="mostrar('omnitrix')"><a href="pag7.html">
+ Omnitrix</a>
+</button>
+
+</aside>
+
+<main class="main">
+
+<div class="card" id="contenido">
+
+  <p><center>
+    <img src="imagenes/xlr8.gif" width="498" height="275">
+  </center></p>
+  <h2>XLR8</h2>
+<p>
+XLR8 (XL8 en España) es la muestra de ADN de un kineceleran del planeta Kinet en el Omnitrix.
+</p>
+<br>
+<p>XLR8 se asemeja a un velociraptor semi-blindado. Tiene orbes negros en los pies y usa un casco negro en forma de cono con una visera protectora deslizante (que es parte de su biologia kineceleran y no mecanica).2 Su visera esta formada por su piel y parte de su craneo.3 Siempre que se levanta la visera, se puede ver su rostro azul, ojos verdes, labios negros y rayas debajo y entre sus ojos; el resto de las caracteristicas de su cabeza se desconocen. XLR8 tiene cinco rayas azules en la cola y usa pantalones negros y una camisa de cuello alto con una raya blanca en el centro.</p>
+<br>
+<br>
+<p>En Ben 10: Omniverse, XLR8 ahora es mas alto y el color blanco de su camisa se reemplaza por el verde, que ahora cubre todo su cuello. Tiene cuatro rayas azules en la cola, los orbes negros en sus pies son mas grandes, su casco es mas largo en la parte trasera y delantera, sus garras son mas largas y su visera es mas oscura.<p>
+
+<p>El XLR8 de 11 años en Omniverse se ve exactamente igual que su yo de 16 años, excepto que es mas bajo y el color verde de su camisa es blanco. Tiene tres rayas en la cola.</div></p>
+<br>
+<center>
+<img src="imagenes/xlr9.jpg"></center>
+</div>
+</div>
+
+<audio controls loop>
+    <source src="musica/ben 10 Intro en Español Latino HD-Primera versión.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ben 10 Universe</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+overflow:hidden;
+}
+
+/* Fondo tipo Omnitrix */
+
+.fondo{
+position:fixed;
+width:100%;
+height:100%;
+background:
+repeating-radial-gradient(
+circle,
+rgba(0,255,100,.15) 0px,
+rgba(0,255,100,.15) 2px,
+transparent 3px,
+transparent 40px
+);
+animation:girarFondo 25s linear infinite;
+z-index:-1;
+}
+
+@keyframes girarFondo{
+from{
+transform:rotate(0deg) scale(1.5);
+}
+to{
+transform:rotate(360deg) scale(1.5);
+}
+}
+
+/* Banner */
+
+.banner{
+height:80px;
+background:#111;
+border-bottom:3px solid #00ff66;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 0 20px #00ff66;
+}
+
+.banner h1{
+color:#00ff66;
+text-shadow:0 0 15px #00ff66;
+}
+
+/* Layout */
+
+.container{
+display:flex;
+height:calc(100vh - 80px);
+}
+
+/* Menú lateral */
+
+.sidebar{
+width:250px;
+background:#0b0b0b;
+border-right:2px solid #00ff66;
+padding:20px;
+}
+
+.sidebar h2{
+color:#00ff66;
+margin-bottom:15px;
+}
+
+.sidebar button{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+background:#111;
+border:1px solid #00ff66;
+color:white;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.sidebar button:hover{
+background:#00ff66;
+color:black;
+}
+
+/* Contenido */
+
+.main{
+flex:1;
+padding:40px;
+overflow-y:auto;
+}
+
+.card{
+background:rgba(15,15,15,.95);
+border:2px solid #00ff66;
+border-radius:20px;
+padding:30px;
+box-shadow:0 0 25px #00ff66;
+}
+
+/* Omnitrix */
+
+.omnitrix{
+width:180px;
+height:180px;
+border:12px solid #00ff66;
+border-radius:50%;
+margin:auto;
+margin-bottom:30px;
+animation:girar 4s linear infinite;
+}
+
+@keyframes girar{
+from{
+transform:rotate(0deg);
+}
+to{
+transform:rotate(360deg);
+}
+}
+
+h2{
+color:#00ff66;
+margin-bottom:15px;
+}
+
+p{
+line-height:1.8;
+}
+
+#Layer1 {
+	position:absolute;
+	width:290px;
+	height:260px;
+	z-index:1;
+	left: 345px;
+	top: 400px;
+}
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('imagenes/hoho.jpg')">
+
+<div class="fondo"></div>
+
+<header class="banner">
+<h1> BEN 10 UNIVERSE</h1>
+</header>
+
+<div class="container">
+
+<aside class="sidebar">
+
+<h2>Aliens</h2>
+<button onclick="mostrar('Heatblast')">
+<a href="pag2.html"> Heatblast</a></button>
+
+<button onclick="mostrar('xlr8')">
+<a href="pag3.html">XLR8</a></button>
+<button onclick="mostrar('diamond')"><a href="index.html">inicio</a></button>
+
+<button onclick="mostrar('grey')"><a href="pag5.html"> Grey Matter</a>
+</button>
+
+<button onclick="mostrar('vilgax')"> <a href="pag6.html">Vilgax</a>
+</button>
+
+<button onclick="mostrar('omnitrix')"><a href="pag7.html">
+ Omnitrix</a>
+</button>
+
+</aside>
+
+<main class="main">
+
+<div class="card" id="contenido">
+
+  <p><center>
+    <img src="imagenes/diamondhead.gif" width="452" height="240">
+  </center></p>
+  <h2>Diamondhead</h2>
+  <p>Al ser una forma de vida basada en silicio, el cuerpo de Diamondhead esta compuesto enteramente de cristales de aguamarina, que son de una sustancia muy dura y duradera similar al diamante.  Tiene cuatro fragmentos de cristal en la espalda y una cabeza afilada</p>
+  <br>
+  <br>
+  <p>En la Serie Original , Diamondhead tenia los ojos amarillos y vestía un uniforme sin mangas que era negro en la mitad derecha y blanco en la izquierda, con un parche negro en el hombro izquierdo donde se encontraba el simbolo original del Omnitrix .</p>}
+  <br>
+  <p>Diamondhead, de 11 años, luce casi igual que en la Serie Original , pero le falta el parche negro alrededor del símbolo del Omnitrix en el lado izquierdo de su traje, y los cristales de su espalda, as como su mandíbula, son mas grandes. Sus ojos son verdes y el Omnitrix tiene un color diferente.<p>
+  <br>
+  <p>En Omniverse , Diamondhead lleva ropa sin mangas completamente negra con una gran franja verde en el centro que llega hasta su cinturon, y pantalones negros. Tiene un cinturon verde con franjas blancas en el que luce el simbolo del Omnitrix . Diamondhead ya no tiene los cristales en el pecho, y los cristales de su espalda tambien han aumentado de tamaño. Su mandibula es mas grande, usa zapatos negros con la suela verde, y ahora solo tiene dos fragmentos de cristal en la espalda.<p>
+    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','imagenes/hoho.jpg',1)"><img src="imagenes/diamante.jpg" name="Image2" width="690" height="1088" border="0"></a></div>
+
+</main>
+
+</div>
+
+<audio controls loop>
+    <source src="musica/ben 10 Intro en Español Latino HD-Primera versión.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
